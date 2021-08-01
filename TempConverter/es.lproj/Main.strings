@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "32"; ObjectID = "1oe-vt-9Mq"; */
+"1oe-vt-9Mq.text" = "32";
+
+/* Class = "UILabel"; text = "is"; ObjectID = "6u5-bW-nt7"; */
+"6u5-bW-nt7.text" = "es";
+
+/* Class = "UILabel"; text = "is"; ObjectID = "9PK-GB-ND9"; */
+"9PK-GB-ND9.text" = "es";
+
+/* Class = "UITabBarItem"; title = "℃ -> ℉"; ObjectID = "F8v-kt-LBs"; */
+"F8v-kt-LBs.title" = "℃ -> ℉";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "G4i-Hb-Cag"; */
+"G4i-Hb-Cag.text" = "0";
+
+/* Class = "UILabel"; text = "degrees Celsius"; ObjectID = "Ggv-II-8vG"; */
+"Ggv-II-8vG.text" = "grados Celsius";
+
+/* Class = "UITextField"; text = "0"; ObjectID = "PbR-pS-Bvw"; */
+"PbR-pS-Bvw.text" = "0";
+
+/* Class = "UILabel"; text = "degrees Celsius"; ObjectID = "cfl-QG-dDM"; */
+"cfl-QG-dDM.text" = "grados Celsius";
+
+/* Class = "UITextField"; text = "32"; ObjectID = "gOW-zo-dxR"; */
+"gOW-zo-dxR.text" = "32";
+
+/* Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "lcA-Ih-Id4"; */
+"lcA-Ih-Id4.text" = "grados Fahrenheit";
+
+/* Class = "UITabBarItem"; title = "℉ -> ℃"; ObjectID = "xd4-bQ-SS8"; */
+"xd4-bQ-SS8.title" = "℉ -> ℃";
+
+/* Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "zgJ-AK-Gnn"; */
+"zgJ-AK-Gnn.text" = "grados Fahrenheit";

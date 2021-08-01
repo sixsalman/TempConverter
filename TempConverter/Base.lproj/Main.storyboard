@@ -1,24 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xOI-aE-XwS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="lor-UG-RiB">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xOI-aE-XwS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bqt-Eh-9p0">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PZZ-2h-0aa" kind="relationship" relationship="viewControllers" id="Yya-no-bCA"/>
+                        <segue destination="KUS-ug-VOu" kind="relationship" relationship="viewControllers" id="RlW-PN-Q5q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yus-SL-4w4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="142" y="78"/>
+        </scene>
+        <!--℉ -> ℃-->
+        <scene sceneID="T7F-ja-hN1">
+            <objects>
+                <viewController id="PZZ-2h-0aa" customClass="fToCViewController" customModule="TempConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sVB-FP-zay">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="32" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOW-zo-dxR">
+                                <rect key="frame" x="20" y="76" width="374" height="97"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fTextFieldEditingChanged:" destination="PZZ-2h-0aa" eventType="editingChanged" id="0cJ-eZ-0iQ"/>
+                                    <outlet property="delegate" destination="PZZ-2h-0aa" id="hxb-zj-Tyw"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgJ-AK-Gnn">
+                                <rect key="frame" x="20" y="181" width="374" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PK-GB-ND9">
+                                <rect key="frame" x="20" y="232" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggv-II-8vG">
+                                <rect key="frame" x="20" y="382" width="374" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4i-Hb-Cag">
+                                <rect key="frame" x="20" y="278.5" width="374" height="95.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0b2-Yz-ORn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Ggv-II-8vG" firstAttribute="leading" secondItem="sVB-FP-zay" secondAttribute="leadingMargin" id="4aV-nJ-3Qw"/>
+                            <constraint firstItem="G4i-Hb-Cag" firstAttribute="leading" secondItem="sVB-FP-zay" secondAttribute="leadingMargin" id="70t-gO-Jec"/>
+                            <constraint firstItem="zgJ-AK-Gnn" firstAttribute="centerX" secondItem="sVB-FP-zay" secondAttribute="centerX" id="8Kc-kc-UgE"/>
+                            <constraint firstItem="gOW-zo-dxR" firstAttribute="centerX" secondItem="sVB-FP-zay" secondAttribute="centerX" id="95y-QG-mrh"/>
+                            <constraint firstItem="9PK-GB-ND9" firstAttribute="leading" secondItem="sVB-FP-zay" secondAttribute="leadingMargin" id="CdW-IJ-Epd"/>
+                            <constraint firstItem="Ggv-II-8vG" firstAttribute="top" secondItem="G4i-Hb-Cag" secondAttribute="bottom" constant="8" id="Fmd-vB-jne"/>
+                            <constraint firstItem="9PK-GB-ND9" firstAttribute="top" secondItem="zgJ-AK-Gnn" secondAttribute="bottom" constant="8" id="KJ2-EZ-th6"/>
+                            <constraint firstItem="zgJ-AK-Gnn" firstAttribute="leading" secondItem="sVB-FP-zay" secondAttribute="leadingMargin" id="LLh-2y-cGW"/>
+                            <constraint firstItem="G4i-Hb-Cag" firstAttribute="centerX" secondItem="sVB-FP-zay" secondAttribute="centerX" id="SQT-Hr-Zkw"/>
+                            <constraint firstItem="gOW-zo-dxR" firstAttribute="top" secondItem="0b2-Yz-ORn" secondAttribute="top" constant="32" id="VZw-JE-tbR"/>
+                            <constraint firstItem="gOW-zo-dxR" firstAttribute="leading" secondItem="sVB-FP-zay" secondAttribute="leadingMargin" id="W6V-5I-lZc"/>
+                            <constraint firstItem="Ggv-II-8vG" firstAttribute="centerX" secondItem="sVB-FP-zay" secondAttribute="centerX" id="cgR-Q3-LKP"/>
+                            <constraint firstItem="G4i-Hb-Cag" firstAttribute="top" secondItem="9PK-GB-ND9" secondAttribute="bottom" constant="8" id="hpj-8m-U7s"/>
+                            <constraint firstItem="9PK-GB-ND9" firstAttribute="centerX" secondItem="sVB-FP-zay" secondAttribute="centerX" id="oR4-ee-bdk"/>
+                            <constraint firstItem="zgJ-AK-Gnn" firstAttribute="top" secondItem="gOW-zo-dxR" secondAttribute="bottom" constant="8" id="xc4-Uw-fXM"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gGz-KZ-3l7" appends="YES" id="vdX-Dv-PKK"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="℉ -&gt; ℃" image="thermometer" catalog="system" id="xd4-bQ-SS8"/>
+                    <connections>
+                        <outlet property="cLabel" destination="G4i-Hb-Cag" id="b6q-cM-vnH"/>
+                        <outlet property="fTextField" destination="gOW-zo-dxR" id="DOX-7v-MoC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wef-cN-HdM" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gGz-KZ-3l7">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="PZZ-2h-0aa" id="8f8-l6-fVS"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="77.678571428571431"/>
+        </scene>
+        <!--℃ -> ℉-->
+        <scene sceneID="A53-o8-IkJ">
+            <objects>
+                <viewController id="KUS-ug-VOu" customClass="cToFViewController" customModule="TempConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sh8-hi-UDK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PbR-pS-Bvw">
+                                <rect key="frame" x="20" y="76" width="374" height="97"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="cTextFieldEditingChanged:" destination="KUS-ug-VOu" eventType="editingChanged" id="mgw-hk-lMu"/>
+                                    <outlet property="delegate" destination="KUS-ug-VOu" id="6K4-H4-Nos"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfl-QG-dDM">
+                                <rect key="frame" x="20" y="181" width="374" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u5-bW-nt7">
+                                <rect key="frame" x="20" y="232" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcA-Ih-Id4">
+                                <rect key="frame" x="20" y="382" width="374" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-vt-9Mq">
+                                <rect key="frame" x="20" y="278.5" width="374" height="95.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L14-Hc-KgN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="PbR-pS-Bvw" firstAttribute="leading" secondItem="sh8-hi-UDK" secondAttribute="leadingMargin" id="JQr-Es-CW2"/>
+                            <constraint firstItem="cfl-QG-dDM" firstAttribute="leading" secondItem="sh8-hi-UDK" secondAttribute="leadingMargin" id="Kal-Ds-FeH"/>
+                            <constraint firstItem="PbR-pS-Bvw" firstAttribute="top" secondItem="L14-Hc-KgN" secondAttribute="top" constant="32" id="LJj-kl-Bgp"/>
+                            <constraint firstItem="lcA-Ih-Id4" firstAttribute="leading" secondItem="sh8-hi-UDK" secondAttribute="leadingMargin" id="Mfx-6t-hw4"/>
+                            <constraint firstItem="lcA-Ih-Id4" firstAttribute="top" secondItem="1oe-vt-9Mq" secondAttribute="bottom" constant="8" id="Rv5-PD-3RZ"/>
+                            <constraint firstItem="PbR-pS-Bvw" firstAttribute="centerX" secondItem="sh8-hi-UDK" secondAttribute="centerX" id="U91-z1-3ys"/>
+                            <constraint firstItem="1oe-vt-9Mq" firstAttribute="top" secondItem="6u5-bW-nt7" secondAttribute="bottom" constant="8" id="d3X-kO-MXK"/>
+                            <constraint firstItem="1oe-vt-9Mq" firstAttribute="centerX" secondItem="sh8-hi-UDK" secondAttribute="centerX" id="efC-F6-eQL"/>
+                            <constraint firstItem="6u5-bW-nt7" firstAttribute="centerX" secondItem="sh8-hi-UDK" secondAttribute="centerX" id="hDh-i0-OPl"/>
+                            <constraint firstItem="6u5-bW-nt7" firstAttribute="leading" secondItem="sh8-hi-UDK" secondAttribute="leadingMargin" id="hqN-8r-YBt"/>
+                            <constraint firstItem="cfl-QG-dDM" firstAttribute="top" secondItem="PbR-pS-Bvw" secondAttribute="bottom" constant="8" id="j7q-2U-Bov"/>
+                            <constraint firstItem="cfl-QG-dDM" firstAttribute="centerX" secondItem="sh8-hi-UDK" secondAttribute="centerX" id="rIx-ue-zR2"/>
+                            <constraint firstItem="1oe-vt-9Mq" firstAttribute="leading" secondItem="sh8-hi-UDK" secondAttribute="leadingMargin" id="uP3-Oc-Ti9"/>
+                            <constraint firstItem="lcA-Ih-Id4" firstAttribute="centerX" secondItem="sh8-hi-UDK" secondAttribute="centerX" id="xpi-bV-6yU"/>
+                            <constraint firstItem="6u5-bW-nt7" firstAttribute="top" secondItem="cfl-QG-dDM" secondAttribute="bottom" constant="8" id="z69-ZY-enu"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Ym3-5J-3yf" appends="YES" id="Ofd-Eb-PPQ"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="℃ -&gt; ℉" image="thermometer" catalog="system" id="F8v-kt-LBs"/>
+                    <connections>
+                        <outlet property="cTextField" destination="PbR-pS-Bvw" id="gSw-Hw-Qgl"/>
+                        <outlet property="fLabel" destination="1oe-vt-9Mq" id="BNr-13-IjL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ju-Qr-wRs" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ym3-5J-3yf">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="KUS-ug-VOu" id="9Em-Ek-eaR"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1549" y="78"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="thermometer" catalog="system" width="93" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
